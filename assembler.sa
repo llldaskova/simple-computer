@@ -1,0 +1,16 @@
+00 READ 83 ;n
+80 = +0001;s
+81 = +0001; i
+82 = +0001;1
+01 LOAD 83; load n in acc
+02 SUB 81;n-i
+03 JNEG 98;if n-i<0
+98 WRITE 80;print s
+99 HALT 00
+04 LOAD 80;if n-i>=0 load s in acc
+05 MUL 81;s*i
+06 STORE 80;s=s*i
+07 LOAD 81;load i in acc
+08 ADD 82;i+1
+09 STORE 81;i=i+1
+10 JUMP 01;
